@@ -1,0 +1,42 @@
+from selenium import webdriver
+
+from selenium.webdriver.common.keys import Keys
+
+
+import time
+
+
+driver = webdriver.Chrome(executable_path ="C:\drivers\chromedriver_win32\chromedriver.exe")
+
+driver.get("https://www.barnesandnoble.com/")
+
+print (f"Initial First time book url {driver.current_url}") #Returns the URL of the page
+
+print (f"Initial First time bok url {driver.title}") # This  will provide the Title of the page
+
+time.sleep(3)
+
+driver.get("https://cisco.com")
+
+print (f"Initial First time cisco url {driver.current_url}") #Returns the URL of the page
+
+print (f"Initial First time cisco url {driver.title}") # This  will provide the Title of the page
+
+time.sleep(3)
+driver.back()
+
+print (f"After moving backward in browser book url {driver.current_url}")
+
+print (f"After moving backward in chrome, book url {driver.title}")
+
+time.sleep(3)
+
+driver.forward()
+
+print (f"After moving forward in browser cisco url {driver.current_url}")
+
+print (f"After moving forward in chrome, cisco url{driver.title}")
+
+time.sleep(10)
+
+driver.close()
