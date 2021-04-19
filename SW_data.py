@@ -144,7 +144,7 @@ if __name__ == '__main__':
 
                 sheet1.cell(row = ipss, column = 4).value = patch_list[item]['newer_version']
 
-                if    patch_list[item]['newer_version'] == "Replace":
+                if patch_list[item]['newer_version'] == "Replace":
                     sheet1.cell(row = ipss,column = 5).value = "Replace"
 
                 elif    value_version == patch_list[item]['newer_version']:

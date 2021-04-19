@@ -1,1 +1,0 @@
-Firmwares go in this directory
